@@ -124,9 +124,9 @@
     .aboutus-image {
         display: none;
     }
-    .section__padding {
+    /* .section__padding {
         padding: 0;
-    }
+    } */
     .aboutus-content h1 {
         font-size: 25px;
     }
