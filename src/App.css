@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: var(--color-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.99);
+  background: url('./Assets/ZEN\ DEVZc.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+
+.page__gradient{
+   /* background: linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 1) 100%); */
+   background: #1a1a1a;
+   overflow-x: hidden;
+}
+
+.p__opensans {
+  font-family: var(--font-family);
+  color: var(--color-crimson);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.p__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+.headtext__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-size: 64px;
+  line-height: 83.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+.gradient__text{
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clop: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient__headtext {
+  font-family: var(--font-base);
+  font-size: 64px;
+  line-height: 83.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clop: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  background-color: var(--color-crimson);
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  background-color: var(--color-black);
+  color: var(--color-crimson);
+}
+
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+.scale-up-center {
+-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 2000px) {
+  .p__cormorant {
+    font-size: 37px;
+    line-height: 67px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .p__opensans {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .headtext__cormorant {
+    font-size: 150px;
+    line-height: 210px;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .section__padding {
+      padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section__padding{
+      padding: 4rem 2rem;
+  }
+
+  .section__margin{
+      margin: 4rem 2rem;
+  }
+  .p__cormorant {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  .p__opensans {
+    font-size: 14px;
+  }
+  .gradient__headtext {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section__padding{
+      padding: 4rem 2rem;
+  }
+
+  .section__margin{
+      margin: 4rem 2rem;
+  }
+  .p__opensans {
+    font-size: 12px;
+  }
+
+  .p__cormorant {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .gradient__headtext {
+    font-size: 25px;
+    line-height: 40px;
   }
 }
