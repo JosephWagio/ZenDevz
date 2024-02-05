@@ -160,6 +160,9 @@ a {
   .section__padding {
       padding: 2rem;
   }
+  .section__margin {
+    margin: 2rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
